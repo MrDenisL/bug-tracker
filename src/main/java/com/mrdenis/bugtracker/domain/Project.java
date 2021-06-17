@@ -2,10 +2,9 @@ package com.mrdenis.bugtracker.domain;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Data
 @Entity
@@ -17,5 +16,7 @@ public class Project {
     private String boardName;
     private String description;
 
+    @OneToMany(mappedBy = "issue")
+    private Set<Issue> issues = new HashSet<>();
 
 }
