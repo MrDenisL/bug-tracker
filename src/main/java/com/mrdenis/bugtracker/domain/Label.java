@@ -21,7 +21,7 @@ public class Label {
             joinColumns = {@JoinColumn(name = "label_id")},
             inverseJoinColumns = { @JoinColumn(name = "issue_id")}
     )
-    private Set<Issue> issue = new HashSet<>();
+    private Set<Issue> issues = new HashSet<>();
 
     @OneToMany(mappedBy = "label")
     private Set<Milestones> milestones = new HashSet<>();

@@ -16,7 +16,7 @@ public class Project {
     private String boardName;
     private String description;
 
-    @OneToMany(mappedBy = "issue")
+    @OneToMany(mappedBy = "project")
     private Set<Issue> issues = new HashSet<>();
 
 }

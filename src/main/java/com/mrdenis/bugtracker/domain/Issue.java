@@ -25,6 +25,6 @@ public class Issue {
     @ManyToOne
     private Project project;
 
-    @OneToMany(mappedBy = "issues")
+    @OneToMany(mappedBy = "issue")
     private Set<Milestones> milestones = new HashSet<>();
 }
