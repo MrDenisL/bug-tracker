@@ -13,7 +13,7 @@ public class Milestones {
 
     private String title;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private Issue issue;
 
     @ManyToOne
